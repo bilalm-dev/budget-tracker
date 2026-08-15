@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/budget_tracker}
+    username: ${SPRING_DATASOURCE_USERNAME:budget_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:#Shankusu0903#}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+
+jwt:
+  secret: ${JWT_SECRET:V1UC2L0YE4dWN9L8KVdq3NNo0hncp8aiKh/6iEJQEXI=}
+  expiration: 86400000
+
+server:
+  port: 8080
